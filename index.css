@@ -1,0 +1,229 @@
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 0px;
+     margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.button {
+  border-radius: 0px;
+  background-color: inherit;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 0px 0px;
+  
+  cursor: pointer;
+  margin: 0px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\27a4';
+  position: absolute;
+  color: black;
+  opacity: 0;
+  top: 0;
+  right: -25px;
+  transition: 0.1s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+    background-color: #eee;
+    color: black;
+}
+
+.button:hover span:after {
+    opacity: 0.8;
+    color: black;
+    background-color: #eee;
+    right: 0;
+}
+
+.button1 {
+  border-radius: 0px;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 14px 16px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\27a4';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -25px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+    padding-right: 20px;
+    color: black;
+}
+
+.button1:hover span:after {
+  opacity: 0.8;
+  right: 0;
+  color: black;
+}
+
+
+.imgcenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    height: 500px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0px;
+    padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; }
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 0;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+body{
+   background-color: #fff;
+}
+
+.nav > li > a:hover{
+    color: black;
+}
+
+.centeralign{
+    color: #fff;
+    text-align: center;
+}
+.cenalign{
+    text-align: center;
+}
+.rightalign{
+    text-align: right;
+}
+.leftalign{
+    text-align: left;
+}
+.gf{
+    font-family: Georgia, serif;
+}
+.whitetext{
+  color: #e9e8f5;
+}
+.whitebg{
+  background-color: #e9e8f5;
+}
+.greytext{
+  color: #333;
+}
+.greybg{
+  background-color: #333;
+}
+.blacktext{
+  color: #1b1c21;
+}
