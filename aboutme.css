@@ -152,11 +152,6 @@
 }
 
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-
-}
-
 .container-fluid{
     width: 100%;
     padding: 0px;
@@ -259,8 +254,8 @@ body{
 .intro2 {
     text-align: center;
     color: #333;
-    padding-right: 200px;
-    padding-left: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
     margin-bottom: 0px;
 }
 .intro3 {
@@ -299,3 +294,22 @@ body{
     font-size: 30px;
 }
 
+.row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  
+  .column {
+    -ms-flex: 25%; 
+    flex: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
