@@ -1,3 +1,13 @@
+html,body { 
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px; 
+  position: relative;
+}
+  
+.full {  
+  height: 100%;
+}
 
 .navbar {
     overflow: hidden;
@@ -152,10 +162,6 @@
 }
 
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-
-}
 
 .container-fluid{
     width: 100%;
@@ -235,7 +241,7 @@ body{
 
 .parallax1 {
     /* The image used */
-    background: url("study.jpg");
+    background: url("./Images/courses3.jpg");
 
     /* Set a specific height */
     min-height: 600px; 
@@ -249,7 +255,7 @@ body{
 
 .parallax2 {
       /* The image used */
-    background-image: url("courses1.jpg");
+    background-image: url("./Images/courses1.jpg");
 
     /* Set a specific height */
     min-height: 600px; 
@@ -263,7 +269,7 @@ body{
 
 .parallax3 {
       /* The image used */
-    background-image: url("courses3.jpg");
+    background-image: url("./Images/courses3.jpg");
 
     /* Set a specific height */
     min-height: 1500px; 
@@ -277,7 +283,7 @@ body{
 
 .parallax4 {
       /* The image used */
-    background-image: url("courses2.jpg");
+    background-image: url("./Images/courses2.jpg");
 
     /* Set a specific height */
     min-height: 600px; 
@@ -300,8 +306,8 @@ body{
 .intro2 {
     text-align: center;
     color: #1F2739;
-    padding-right: 200px;
-    padding-left: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-bottom: 0px;
 }
 .intro3 {
