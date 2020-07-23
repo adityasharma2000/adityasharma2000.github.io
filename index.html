@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
- <link rel="shortcut icon" href="icon.ico">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="index.css">
 </head>
-<body class="greybg">
-<nav class="navbar navbar-fixed-top">
+<body class="greybg" onload="dropbackground()">
+<nav id="navbar" class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html"><button class="button"><span>Home</span></button></a></li>
@@ -21,38 +19,54 @@
       <!-- <li class="active"><a href="team.html"><button class="button"><span>Our Team</span></button></a></li> -->
       <li class="active"><a href="contact.html"><button class="button"><span>Contact</span></button></a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right whitetext">
-      <li><a href="#">
-
-</a>
-     </li>
-      
-    </ul>
+    <!-- <ul class="nav navbar-nav navbar-right whitetext">
+      <li><a href="#"></a></li>  
+    </ul> -->
   </div>
 </nav>
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
 
 
 
-<div class="container-fluid">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-
-    <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="./Images/img3.jpg" class="carouselimage" alt="1">
-	            <div class="carousel-caption gf">
-	                <h1>Aditya Sharma</h1>
-                    <h2>Undergrad @CSE IITB</h2>
-                    </br></br></br></br></br></br></br></br>
-                  <p></br></br></p>
-                </br></br></br></br></br></br></br></br>
-               
-	            </div>
-            </div>
-        </div>
-    </div>
+<div id="dropbg1" class="sliding-div1">
+  <div id="dropbg2" class="sliding-div2">
+    <div id ="undergrad1" class="undergrad1">Aditya Sharma</div>
+    <div id="undergrad2" class="undergrad2">Undergrad @CSE IITB</div>
+  </div>
 </div>
+<script>
+  document.getElementById("navbar").style.top = "-50px";
+  document.getElementById("undergrad1").style.opacity="0";
+  document.getElementById("undergrad2").style.opacity="0";
+  function dropbackground() {
+    document.getElementById("dropbg1").style.height = "100vh";
+    setTimeout(() => { document.getElementById("dropbg2").style.height = "100vh"; 
+                      document.getElementById("navbar").style.top = "0px"; 
+                      document.getElementById("navbar").style.display = 'inline';}, 2000);
+    setTimeout(() => { document.getElementById("undergrad1").style.visibility = "visible"; 
+                      document.getElementById("undergrad2").style.visibility = "visible";
+                      document.getElementById("undergrad1").style.opacity="1";
+                      document.getElementById("undergrad2").style.opacity="1";
+                      document.getElementById("undergrad1").style.WebkitTransform = "translateY(30vh)"; 
+                      document.getElementById("undergrad1").style.msTransform = "translateY(30vh)";
+                      document.getElementById("undergrad1").style.transform="translateY(30vh)"
+                      document.getElementById("undergrad2").style.WebkitTransform = "translateY(30vh)"; 
+                      document.getElementById("undergrad2").style.msTransform = "translateY(30vh)";
+                      document.getElementById("undergrad2").style.transform="translateY(30vh)"}, 4000);
+    
+  }
+</script>
 </body>
 </html>
 
