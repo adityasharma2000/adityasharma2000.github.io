@@ -8,72 +8,71 @@ html,body {
 .full {  
   height: 100%;
 }
-
 .navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0px 0px;
-     margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity: 0;
-    transition: all 0.7s;
+  overflow: hidden;
+  background-color: #333;
+  font-family: Georgia, Helvetica, sans-serif;
+  padding: 0px 0px;
+   margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 3vh !important;
+  letter-spacing: 2vh;
+  opacity: 0;
+  transition: all 0.7s;
 }
 
 .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  float: left;
+  font-size: 2vh;
+  color: white;
+  text-align: center;
+  padding: 2vh 2vh;
+  text-decoration: none;
 }
 
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: black;
+  background-color: black;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .button {
-  border-radius: 0px;
-  background-color: inherit;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  padding: 0px 0px;
-  
-  cursor: pointer;
-  margin: 0px;
+border-radius: 0px;
+background-color: inherit;
+border: none;
+color: white;
+text-align: center;
+font-size: 2.4vh;
+padding: 0px 0px;
+
+cursor: pointer;
+margin: 0px;
 }
 
 .button span {
@@ -106,14 +105,15 @@ html,body {
     right: 0;
 }
 
+
 .button1 {
   border-radius: 0px;
   background-color: black;
   border: none;
   color: white;
   text-align: center;
-  font-size: 16px;
-  padding: 14px 16px;
+  font-size: 2.4vh;
+  padding: 2vh 2vh;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
