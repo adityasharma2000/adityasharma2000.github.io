@@ -37,11 +37,15 @@
     prevScrollpos = currentScrollPos;
   }
 </script>
+<div class="containerclass">
+<div id="temp1" class="dot"></div>
+<div id="temp2" class="dot"></div>
+<div id="temp3" class="dot"></div>
+<div id="temp4" class="dot"></div>
+</div>
 
-
-
-<div class="full">
-  <div class="intro greytext full whitebg" style="float: left; width: 33%;">
+<div id="containcontact" class="full">
+  <div id="contact" class="intro greytext full whitebg" style="float: left; width: 33%;">
     </br>
     </br>
     </br>
@@ -68,15 +72,31 @@
     
     function dropbackground() {
       // document.getElementById("dropbg1").style.height = "100vh";
+      var w = window.innerWidth;
+      var h = window.innerHeight;
       setTimeout(() => { 
                         // document.getElementById("dropbg2").style.height = "100vh"; 
                         document.getElementById("navbar").style.top = "0px"; 
                         document.getElementById("navbar").style.visibility = "visible";
                         document.getElementById("navbar").style.opacity = "0.8";
+                        document.getElementById("contact").style.opacity = "1";
+                        document.getElementById("contact").style.height="100vh";
                         }, 1000);
+      setTimeout(() => {document.getElementById("temp1").style.height= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp1").style.width= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp1").style.transform = "translateX(-"+Math.max(w,h)+"px) translateY(-"+Math.max(w,h)+"px)";
+                        document.getElementById("temp2").style.height= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp2").style.width= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp2").style.transform = "translateX(-"+Math.max(w,h)+"px) translateY(-"+Math.max(w,h)+"px)";
+                        document.getElementById("temp3").style.height= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp3").style.width= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp3").style.transform = "translateX(-"+Math.max(w,h)+"px) translateY(-"+Math.max(w,h)+"px)";
+                        document.getElementById("temp4").style.height= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp4").style.width= 2*Math.max(w,h)+"px";
+                        document.getElementById("temp4").style.transform = "translateX(-"+Math.max(w,h)+"px) translateY(-"+Math.max(w,h)+"px)";
+                        }, 2500);
       setTimeout(() => {}, 2000);
-      setTimeout(() => {}, 2000);
-      setTimeout(() => {}, 3000);}
+      setTimeout(() => {document.getElementById("contact").style.width="100%";}, 3500);}
   
   
   

@@ -13,6 +13,7 @@ a {
   font-size: 3vh !important;
   letter-spacing: 2vh;
   opacity: 0.8;
+  transition: all 0.7s;
 }
 
 .navbar a {
@@ -109,6 +110,7 @@ margin: 0px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
+  
 }
 
 
@@ -145,7 +147,7 @@ margin: 0px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    height: 40vh;
+    height: 500px;
 }
 
 .imgright {
