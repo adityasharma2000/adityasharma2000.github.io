@@ -41,21 +41,38 @@
 
 <div id="dropbg1" class="sliding-div1">
   <div id="dropbg2" class="sliding-div2">
+    <div id="temp1" class="temp1"></div>
     <div id ="undergrad1" class="undergrad1">Aditya Sharma</div>
     <div id="undergrad2" class="undergrad2">Undergrad @CSE IITB</div>
+    <div class="floatcenter">
+      <div id="temp2" class="temp2"></div>
+      <div id="center-temp" class="center-temp"></div>
+      <div id="temp3" class="temp3"></div>
+    </div>
+    
   </div>
 </div>
 <script>
+  let rectX = 0;
+  let rectY = 0;
   document.getElementById("navbar").style.opacity="0";
   document.getElementById("undergrad1").style.opacity="0";
   document.getElementById("undergrad2").style.opacity="0";
+  
   function dropbackground() {
     document.getElementById("dropbg1").style.height = "100vh";
     setTimeout(() => { document.getElementById("dropbg2").style.height = "100vh"; 
                       document.getElementById("navbar").style.top = "0px"; 
                       document.getElementById("navbar").style.visibility = "visible";
                       document.getElementById("navbar").style.opacity = "0.8";
-                      document.getElementById("fluid").style.opacity = "1"}, 1000);
+                      document.getElementById("fluid").style.opacity = "1";
+                      document.getElementById("undergrad1").style.WebkitTransform = "translateY(-40vh)"; 
+                      document.getElementById("undergrad1").style.msTransform = "translateY(-40vh)";
+                      document.getElementById("undergrad1").style.transform="translateY(-40vh)"
+                      document.getElementById("undergrad2").style.WebkitTransform = "translateY(-40vh)"; 
+                      document.getElementById("undergrad2").style.msTransform = "translateY(-40vh)";
+                      document.getElementById("undergrad2").style.transform="translateY(-40vh)";
+                      }, 1000);
     setTimeout(() => { document.getElementById("undergrad1").style.visibility = "visible"; 
                       document.getElementById("undergrad2").style.visibility = "visible";
                       document.getElementById("undergrad1").style.opacity="1";
@@ -65,9 +82,62 @@
                       document.getElementById("undergrad1").style.transform="translateY(30vh)"
                       document.getElementById("undergrad2").style.WebkitTransform = "translateY(30vh)"; 
                       document.getElementById("undergrad2").style.msTransform = "translateY(30vh)";
-                      document.getElementById("undergrad2").style.transform="translateY(30vh)"}, 2000);
-    
-  }
+                      document.getElementById("undergrad2").style.transform="translateY(30vh)";
+                      }, 2000);
+    setTimeout(() => {document.getElementById("temp1").style.opacity="0.5";
+                      document.getElementById("temp1").style.WebkitTransform = "translateY(25vh)"; 
+                      document.getElementById("temp1").style.msTransform = "translateY(25vh)";
+                      document.getElementById("temp1").style.transform="translateY(25vh)";
+                      document.getElementById("temp2").style.WebkitTransform = "translateY(-30vh)"; 
+                      document.getElementById("temp2").style.msTransform = "translateY(-30vh)";
+                      document.getElementById("temp2").style.transform="translateY(-30vh)";
+                      document.getElementById("temp3").style.WebkitTransform = "translateY(-30vh)"; 
+                      document.getElementById("temp3").style.msTransform = "translateY(-30vh)";
+                      document.getElementById("temp3").style.transform="translateY(-30vh)";
+                      document.getElementById("temp2").style.opacity="0.5";
+                      document.getElementById("temp3").style.opacity="0.5";
+                      document.getElementById("temp1").style.height="75vh";
+                      document.getElementById("temp2").style.height="65vh";
+                      document.getElementById("center-temp").style.height="65vh";
+                      document.getElementById("temp3").style.height="65vh";}, 2000);
+    setTimeout(() => {document.getElementById("temp2").style.opacity="1";
+                      document.getElementById("temp3").style.opacity="1";
+                      document.getElementById("temp2").style.WebkitTransform = "translateY(-80vh)"; 
+                      document.getElementById("temp2").style.msTransform = "translateY(-80vh)";
+                      document.getElementById("temp2").style.transform="translateY(-80vh)"
+                      document.getElementById("temp3").style.WebkitTransform = "translateY(-80vh)"; 
+                      document.getElementById("temp3").style.msTransform = "translateY(-80vh)";
+                      document.getElementById("temp3").style.transform="translateY(-80vh)";
+                      document.getElementById("temp1").style.WebkitTransform = "translateY(150vh)"; 
+                      document.getElementById("temp1").style.msTransform = "translateY(100vh)";
+                      document.getElementById("temp1").style.transform="translateY(100vh)";
+                      document.getElementById("center-temp").style.height="0vh";
+                      document.getElementById("temp3").style.height="0vh";
+                      document.getElementById("temp2").style.height="0vh";
+                      document.getElementById("temp1").style.height="0vh";
+                      document.getElementById("undergrad1").style.WebkitTransform = "translateY(30vh)"; 
+                      document.getElementById("undergrad1").style.msTransform = "translateY(30vh)";
+                      document.getElementById("undergrad1").style.transform="translateY(30vh)"
+                      document.getElementById("undergrad2").style.WebkitTransform = "translateY(30vh)"; 
+                      document.getElementById("undergrad2").style.msTransform = "translateY(30vh)";
+                      document.getElementById("undergrad2").style.transform="translateY(30vh)"
+                      }, 3000);}
+
+  //   setTimeout(()=> {draw();},4000);
+  // function draw() {
+  //   context.fillStyle = '#ff8080';
+  //   context.fillRect(rectX, rectY, 150, 100);
+  // }
+  // function gameLoop(timeStamp) {
+  //   update();
+  //   draw();
+  //   window.requestAnimationFrame(gameLoop);
+  // }
+  // function update() {
+  //   rectX += 1;
+  //   rectY += 1;
+  // }
+
 </script>
 </body>
 </html>
