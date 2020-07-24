@@ -25,6 +25,15 @@
 </nav>
 
 <div class="whitebg greytext cenalign"></div>
+<div id="app1" class="app1 whitetext">
+  Video Converter
+</div>
+<div id="app2" class="app2 whitetext">
+  Media Analyzer
+</div>
+<div id="app3" class="app3 whitetext">
+  Ping Pong Game
+</div>
 <div id="temp3" class="temp3">Web Applications</div>
 <div id="temp4" class="temp4"></div>
 <div id="temp1" class="temp1"></div>
@@ -67,7 +76,7 @@
                       document.getElementById("myphoto").style.transform="translateY(10vh)";
                       document.getElementById("temp1").style.opacity = "0.5";
                       document.getElementById("temp2").style.opacity = "0.5";
-                      document.getElementById("temp3").style.opacity = "0.7";
+                      document.getElementById("temp3").style.opacity = "0.9";
                       document.getElementById("temp1").style.width = "70%";
                       document.getElementById("temp2").style.width = "70vw";
                       document.getElementById("temp3").style.height = "70vh";
@@ -101,6 +110,19 @@
                       document.getElementById("temp3").style.paddingTop = "0vh";
                       document.getElementById("temp3").style.lineHeight = "19vh";
                       document.getElementById("temp3").style.fontSize = "7vw";
+                     }, 2500);
+    setTimeout(() => {document.getElementById("app1").style.opacity = "1";
+                      document.getElementById("app1").style.WebkitTransform = "translateX(18vw)"; 
+                      document.getElementById("app1").style.msTransform = "translateX(18vw)";
+                      document.getElementById("app1").style.transform="translateX(18vw)";
+                      document.getElementById("app2").style.opacity = "1";
+                      document.getElementById("app2").style.WebkitTransform = "translateX(18vw)"; 
+                      document.getElementById("app2").style.msTransform = "translateX(18vw)";
+                      document.getElementById("app2").style.transform="translateX(18vw)";
+                      document.getElementById("app3").style.opacity = "1";
+                      document.getElementById("app3").style.WebkitTransform = "translateX(18vw)"; 
+                      document.getElementById("app3").style.msTransform = "translateX(18vw)";
+                      document.getElementById("app3").style.transform="translateX(18vw)";
                      }, 2500);}
 
 </script>

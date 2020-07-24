@@ -412,3 +412,80 @@ vertical-align: middle;
     position: absolute;
   }
 
+  .app1 {
+    /* visibility: hidden; */
+    opacity: 0;
+    margin-left: 5vw;
+    width: 15vw;
+    height: 40vh;
+    margin-top: 20vh;
+    transition: transform 1s;
+    background-color: rgb(11, 12, 116);
+    transition: all 1s;
+    z-index: 2;
+    float: left;
+    position: absolute;
+    padding-top: 5vh;
+    font-size: 2vw;
+    text-align: center;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 1vh;
+  }
+
+  .app1:hover {
+    /* visibility: hidden; */
+    margin-top: 30vh;
+  }
+  
+  .app2 {
+    /* visibility: hidden; */
+    opacity: 0;
+    margin-left: 25vw;
+    width: 15vw;
+    height: 40vh;
+    margin-top: 20vh;
+    transition: transform 1s;
+    background-color: rgb(14, 37, 165);
+    float: left;
+    transition: all 1s;
+    z-index: 2;
+    position: absolute;
+    padding-top: 5vh;
+    font-size: 2vw;
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 1vh;
+  }
+
+  .app2:hover {
+    /* visibility: hidden; */
+    margin-top: 30vh;
+  }
+
+  .app3 {
+    /* visibility: hidden; */
+    opacity: 0;
+    margin-left: 45vw;
+    width: 15vw;
+    height: 40vh;
+    margin-top: 20vh;
+    transition: transform 1s;
+    background-color: rgb(49, 74, 216);
+    float: left;
+    transition: all 1s;
+    z-index: 2;
+    position: absolute;
+    padding-top: 5vh;
+    font-size: 2vw;
+    text-align: center;
+    padding-left: 1vw;
+    border-radius: 1vh;
+    padding-right: 1vw;
+  }
+
+  .app3:hover {
+    /* visibility: hidden; */
+    margin-top: 30vh;
+  }
