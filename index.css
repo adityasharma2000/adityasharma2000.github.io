@@ -9,7 +9,8 @@
   border: 0;
   font-size: 3vh !important;
   letter-spacing: 2vh;
-  opacity: 0.8;
+  opacity: 0;
+  transition: all 0.7s;
 }
 
 .navbar a {
@@ -95,18 +96,20 @@ margin: 0px;
     right: 0;
 }
 
+
 .button1 {
   border-radius: 0px;
   background-color: black;
   border: none;
   color: white;
   text-align: center;
-  font-size: 16px;
-  padding: 14px 16px;
+  font-size: 2.4vh;
+  padding: 2vh 2vh;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
 }
+
 
 .button1 span {
   cursor: pointer;

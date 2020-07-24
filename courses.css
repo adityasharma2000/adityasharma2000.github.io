@@ -20,6 +20,7 @@ html,body {
   font-size: 3vh !important;
   letter-spacing: 2vh;
   opacity: 0.8;
+  transition: top 0.7s;
 }
 
 .navbar a {

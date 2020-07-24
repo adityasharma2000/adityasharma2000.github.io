@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
- <link rel="shortcut icon" href="icon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,8 +8,8 @@
 <link rel="stylesheet" href="aboutme.css">
 
 </head>
-<body>
-<nav class="navbar navbar-fixed-top">
+<body onload="dropbackground()">
+<nav id="navbar" class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
        <li class="active"><a href="index.html"><button class="button"><span>Home</span></button></a></li>
@@ -24,50 +22,53 @@
     </ul>
   </div>
 </nav>
-<div class="whitebg greytext cenalign"></div>
-<br/>
 
-<div><img src="./Images/IMG_1.jpg" alt="Avatar" class="imgcenter"></div>
+<div class="whitebg greytext cenalign"></div>
+<div id="temp1" class="temp1"></div>
+<div id="temp2" class="temp2"></div>
+<div id="temp3" class="temp3"></div>
+<div id="myphoto" class="hiddenclass"><img src="./Images/IMG_1.jpg" alt="Avatar" class="imgcenter"></div>
 <br/>
-<div class="intro1 cenalign">
-  <h3>About Me</h3>
+<div id="intro1" class="intro1 cenalign">
+  <h3 class="bluecol">Aditya Sharma</h3>
 </br>
-  <h4 class="bluecol">Aditya Sharma</h4>
+  <h4>About Me</h4>
 </br>
   <p>I am a Third Year Student at Indian Institute of Technology Bombay. I am pursuing a B.Tech Degree in Computer Science and Engineering and a minor in Physics. Born at the dawn of 21st Century, I have closely observed the technological changes around us. I wish to contribute in this Technological as well as Scientific Revolution brought by this century.<br><br>
-    <h4 class="bluecol"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Resume</button></h4></p></div>
+    <h4 class="bluecol"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Resume</button></h4></p>
+  </div>
 </br>
 <div class="parallax1"></div>
-<div class="pad"></br></br></div>
-<div class="intro2 pad greytext whitebg">
-  <h2 class="whitetext">Photo Gallery</h3></br>
+<div class="pad whitebg"></br></div>
+<div id="intro2" class="intro2 pad">
+  <h2 class="greytext">Photo Gallery</h3></br>
     <div class="row"> 
       <div class="column">
-        <img src="./Photos/4.jpeg" style="width:100%">
-        <img src="./Photos/2.jpg" style="width:100%">
-        <img src="./Photos/3.jpg" style="width:100%">
-        <img src="./Photos/1.jpeg" style="width:100%">
+        <img class="class1" src="./Photos/4.jpeg" style="width:100%">
+        <img class="class2" src="./Photos/2.jpg" style="width:100%">
+        <img class="class3" src="./Photos/3.jpg" style="width:100%">
+        <img class="class4" src="./Photos/1.jpeg" style="width:100%">
 
       </div>
       <div class="column">
-        <img src="./Photos/5.jpeg" style="width:100%">
-        <img src="./Photos/6.jpeg" style="width:100%">
-        <img src="./Photos/7.jpeg" style="width:100%">
-        <img src="./Photos/8.jpeg" style="width:100%">
+        <img class="class1" src="./Photos/5.jpeg" style="width:100%">
+        <img class="class2" src="./Photos/6.jpeg" style="width:100%">
+        <img class="class3" src="./Photos/7.jpeg" style="width:100%">
+        <img class="class4" src="./Photos/8.jpeg" style="width:100%">
 
       </div>  
       <div class="column">
-        <img src="./Photos/9.jpeg" style="width:100%">
-        <img src="./Photos/10.jpeg" style="width:100%">
-        <img src="./Photos/11.jpeg" style="width:100%">
+        <img class="class1" src="./Photos/9.jpeg" style="width:100%">
+        <img class="class2" src="./Photos/10.jpeg" style="width:100%">
+        <img class="class3" src="./Photos/11.jpeg" style="width:100%">
         
 
       </div>
       <div class="column">
-        <img src="./Photos/13.jpeg" style="width:100%">
-        <img src="./Photos/14.jpeg" style="width:100%">
-        <img src="./Photos/15.jpeg" style="width:100%">
-        <img src="./Photos/12.jpeg" style="width:100%">
+        <img class="class1" src="./Photos/13.jpeg" style="width:100%">
+        <img class="class2" src="./Photos/14.jpeg" style="width:100%">
+        <img class="class3" src="./Photos/15.jpeg" style="width:100%">
+        <img class="class4" src="./Photos/12.jpeg" style="width:100%">
         <!-- <img src="./Photos/16.jpeg" style="width:100%"> -->
 
       </div>
@@ -75,6 +76,89 @@
   
   <br>
 </div>
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    if (document.getElementById("intro2").offsetTop < currentScrollPos+window.innerHeight) {
+      document.getElementById("intro2").style.opacity = "1";
+      changeOpacityto1();
+    } else {
+      document.getElementById("intro2").style.opacity = "0";
+      changeOpacityto0();
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  function changeOpacityto1() {
+    for(let x=0; x<5; x++){
+      let photos = document.getElementsByClassName(`class${x}`);
+      for (let i =0;i < photos.length; i++){
+        setTimeout(() =>{photos[i].style.opacity = "1";}, x*500);
+    	}
+    }
+  }
+  function changeOpacityto0() {
+    for(let x=0; x<5; x++){
+      let photos = document.getElementsByClassName(`class${x}`);
+      for (let i =0;i < photos.length; i++){
+        photos[i].style.opacity = "0";
+    	}
+    }
+  }
+</script>
+<script>
+  document.getElementById("navbar").style.opacity="0";
+  // document.getElementById("myphoto").style.opacity="0";
+  // document.getElementById("undergrad2").style.opacity="0";
+  
+  function dropbackground() {
+    document.getElementById("myphoto").style.WebkitTransform = "translateY(-20vh)"; 
+    document.getElementById("myphoto").style.msTransform = "translateY(-20vh)";
+    document.getElementById("myphoto").style.transform="translateY(-20vh)";
+    // document.getElementById("dropbg1").style.height = "100vh";
+    setTimeout(() => {document.getElementById("myphoto").style.visibility = "visible";
+                      document.getElementById("navbar").style.top = "0px"; 
+                      document.getElementById("navbar").style.visibility = "visible";
+                      document.getElementById("navbar").style.opacity = "0.8";
+                      document.getElementById("myphoto").style.opacity = "1";
+                      document.getElementById("myphoto").style.WebkitTransform = "translateY(10vh)"; 
+                      document.getElementById("myphoto").style.msTransform = "translateY(10vh)";
+                      document.getElementById("myphoto").style.transform="translateY(10vh)";
+                      document.getElementById("temp1").style.opacity = "0.5";
+                      document.getElementById("temp2").style.opacity = "0.5";
+                      document.getElementById("temp3").style.opacity = "0.5";
+                      document.getElementById("temp1").style.width = "70%";
+                      document.getElementById("temp2").style.width = "70vw";
+                      document.getElementById("temp3").style.width = "70%";
+                      document.getElementById("temp1").style.marginRight="0%";
+                      document.getElementById("temp1").style.marginLeft="30%";
+                      document.getElementById("temp3").style.marginRight="0%";
+                      document.getElementById("temp3").style.marginLeft="30%";
+                      document.getElementById("temp2").style.marginLeft="0%";
+                      
+                      }, 1000);
+    setTimeout(() => {document.getElementById("intro1").style.opacity = "1";
+                      document.getElementById("intro1").style.WebkitTransform = "translateY(10vh)"; 
+                      document.getElementById("intro1").style.msTransform = "translateY(10vh)";
+                      document.getElementById("intro1").style.transform="translateY(10vh)" 
+                      }, 1500);
+    setTimeout(() => { document.getElementById("temp1").style.opacity = "1";
+                      document.getElementById("temp2").style.opacity = "1";
+                      document.getElementById("temp3").style.opacity = "1";
+                      document.getElementById("temp1").style.width = "0vw";
+                      document.getElementById("temp2").style.width = "0vw";
+                      document.getElementById("temp3").style.width = "0vw";
+                      document.getElementById("temp1").style.marginLeft = "100%";
+                      document.getElementById("temp3").style.marginLeft = "100%";
+                      }, 2000);
+    setTimeout(() => { }, 3000);}
+
+</script>
 
 
 <!-- Modal -->
@@ -104,8 +188,5 @@
 
   </div>
 </div>
-<script>
- 
-</script>
 </body>
 </html>
