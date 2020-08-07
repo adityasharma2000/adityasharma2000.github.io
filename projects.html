@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-
- <link rel="shortcut icon" href="icon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    
 
 <link rel="stylesheet" href="projects.css">
 <head>
-<body>
-<nav class="navbar navbar-fixed-top">
+<body onload="dropbackground()">
+<nav id="navbar" class="navbar navbar-fixed-top">
   <div class="container-fluid">
      <ul class="nav navbar-nav">
        <li class="active"><a href="index.html"><button class="button"><span>Home</span></button></a></li>
       <li class="active"><a href="aboutme.html"><button class="button"><span>About Me</span></button></a></li>
       <!-- <li class="active"><a href="AdityaCV.pdf"><button class="button"><span>Resume</span></button></a></li> -->
       <li class="active"><a href="webapp.html"><button class="button"><span>Web Apps</span></button></a></li> 
-      <li class="active"><a href="courses.html"><button class="button"><span>Courses</span></button></a></li>
+      <li class="active"><a href="talks.html"><button class="button"><span>Notes</span></button></a></li>
       <li class="active"><a href="projects.html"><button class="button"><span>Projects</span></button></a></li>
       <!-- <li class="active"><a href="team.html"><button class="button"><span>Our Team</span></button></a></li> -->
       <li class="active"><a href="contact.html"><button class="button"><span>Contact</span></button></a></li>
     </ul>
   </div>
 </nav>
+<script>
+   var prevScrollpos = window.pageYOffset;
+   window.onscroll = function() {
+   var currentScrollPos = window.pageYOffset;
+     if (prevScrollpos > currentScrollPos) {
+       document.getElementById("navbar").style.top = "0";
+     } else {
+       document.getElementById("navbar").style.top = "-50px";
+     }
+     prevScrollpos = currentScrollPos;
+   }
+ </script>
 
 <div class="parallax1"></div>
 
@@ -330,6 +340,23 @@
 
 
   </div>
+  <script>
+  
+   document.getElementById("navbar").style.opacity="0";
+   // document.getElementById("undergrad1").style.opacity="0";
+   // document.getElementById("undergrad2").style.opacity="0";
+   
+   function dropbackground() {
+   //   document.getElementById("dropbg1").style.height = "100vh";
+     setTimeout(() => {document.getElementById("navbar").style.top = "0px"; 
+                       document.getElementById("navbar").style.visibility = "visible";
+                       document.getElementById("navbar").style.opacity = "0.8";
+                       }, 1000);
+     setTimeout(() => {}, 2000);
+     setTimeout(() => {}, 2000);
+     setTimeout(() => {}, 3000);}
+ 
+ </script>
 
 
 

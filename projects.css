@@ -12,7 +12,7 @@ a {
   border: 0;
   font-size: 3vh !important;
   letter-spacing: 2vh;
-  opacity: 0.8;
+  opacity: 0;
   transition: all 0.7s;
 }
 
