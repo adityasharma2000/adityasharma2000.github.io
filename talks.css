@@ -476,7 +476,6 @@ html,body {
         color: rgb(255, 255, 255);
         float: left;
         transition: all 1s;
-        transition: opacity 1s;
         z-index: 2;
         position: absolute;
       }
@@ -496,7 +495,6 @@ html,body {
         color: white;
         float: left;
         transition: all 4s;
-        transition: opacity 4s;
         z-index: 2;
         position: absolute;
       }
@@ -516,7 +514,6 @@ html,body {
         color: white;
         float: left;
         transition: all 3s;
-        transition: opacity 3s;
         z-index: 2;
         position: absolute;
       }
@@ -536,7 +533,6 @@ html,body {
         color: white;
         float: left;
         transition: all 2s;
-        transition: opacity 2s;
         z-index: 2;
         position: absolute;
       }
