@@ -46,26 +46,44 @@
   <div class="containerclass">
     <div id="temp1" class="temp1">
         <div id="drop1" class="dropdownN1">
-            <button class="dropbtnN1">Notes</button>
+            <button class="dropbtnN1">Computer Science</button>
             <div class="dropdown-contentN1">
-                <a href="Talks/WebAssembly.pdf"  data-toggle="tooltip" title="Key Concepts and Ideas">WebAssembly</a>
-                <a href="Talks/V8.pdf"  data-toggle="tooltip" title="Basic Overview">Chrome's V8 Engine</a>
-                <a href="Talks/Consensus.pdf"  data-toggle="tooltip" title="Problem Description and Paxos as a solution">Consensus Problem</a>
-                <a href="Talks/MST.pdf"  data-toggle="tooltip" title="Problem Description and Algorithms">Minimum Spanning Tree</a>
-                <a href="Talks/Time And Ordering.pdf"  data-toggle="tooltip" title="Ordering in Distributed Systems">Time and Ordering</a>
-                <a href="Talks/Concurrency and Replica Control.pdf"  data-toggle="tooltip" title="Concurrency and Replica Control in Distributed Systems">Concurrency Control</a>
+                <a href="Talks/CS/WebAssembly.pdf"  data-toggle="tooltip" title="Key Concepts and Ideas">WebAssembly</a>
+                <a href="Talks/CS/V8.pdf"  data-toggle="tooltip" title="Basic Overview">Chrome's V8 Engine</a>
+                <a href="Talks/CS/Consensus.pdf"  data-toggle="tooltip" title="Problem Description and Paxos as a solution">Consensus Problem</a>
+                <a href="Talks/CS/epidemic.pdf"  data-toggle="tooltip" title="Approaches to spread information">Gossip and Epidemic Protocols</a>
+                <a href="Talks/CS/MST.pdf"  data-toggle="tooltip" title="Problem Description and Algorithms">Minimum Spanning Tree</a>
+                <a href="Talks/CS/Time And Ordering.pdf"  data-toggle="tooltip" title="Ordering in Distributed Systems">Time and Ordering</a>
+                <a href="Talks/CS/Concurrency and Replica Control.pdf"  data-toggle="tooltip" title="Concurrency and Replica Control in Distributed Systems">Concurrency Control</a>
             </div>
         </div>
     </div>
     <div id="temp2" class="temp2">
-        <div id="drop2" class="dropdownN2">
-            <button class="dropbtnN2"  style="border: none; background-color: inherit;">Talk Synopses</button>
-            <div class="dropdown-contentN2">
-                <a href="Talks/Talks 1.pdf"  data-toggle="tooltip" title="Google I/O 2019">WebAssembly for Web Developers</a>
-                <a href="Talks/Talks 2.pdf"  data-toggle="tooltip" title="Chrome Dev Summit 2019">Modern WebAssembly</a>
+        <div id="drop2" class="dropdownN1">
+            <button class="dropbtnN1">Mathematics</button>
+            <div class="dropdown-contentN1">
+                <a href="Talks/Mathematics/Algebraic n Transcendental Eqns.pdf"  data-toggle="tooltip" title="Solving Algebraic and Transcendental Equations numerically">Numerical Methods</a>
+                <a href="Talks/Mathematics/Bisection Method.pdf"  data-toggle="tooltip" title="Concept and Algorithm">Bisection Method</a>
+                <a href="Talks/Mathematics/Newton Raphson Method.pdf"  data-toggle="tooltip" title="Concept and Algorithm">Newton Raphson Method</a>
+                <a href="Talks/Mathematics/Regula Falsi Method.pdf"  data-toggle="tooltip" title="Concept and Algorithm">Regula Falsi Method</a>
+                
             </div>
         </div>
     </div>
+    <div id="temp3" class="temp3">
+        <div id="drop3" class="dropdownN2">
+            <button class="dropbtnN2"  style="border: none; background-color: inherit;">Talk Synopses</button>
+            <div class="dropdown-contentN2">
+                <a href="Talks/Synopses/Talks 1.pdf"  data-toggle="tooltip" title="Google I/O 2019">WebAssembly for Web Developers</a>
+                <a href="Talks/Synopses/Talks 2.pdf"  data-toggle="tooltip" title="Chrome Dev Summit 2019">Modern WebAssembly</a>
+            </div>
+        </div>
+    </div>
+    <div id="contrilabel">Contributors</div>
+        <div id="contri1">Aditya Sharma</div>
+        <div id="contri2">Nirav Diwan</div>
+        <div id="contri3">Yashasvi Garg</div>
+    
   </div>
   <script>
 
@@ -90,6 +108,13 @@
     drop2.onmouseout = function(){
         document.getElementById("temp2").style.marginTop = "45vh";
     };
+    drop2 = document.getElementById("drop3");
+    drop2.onmouseover = function(){
+        document.getElementById("temp3").style.marginTop = "15vh";
+    };
+    drop2.onmouseout = function(){
+        document.getElementById("temp3").style.marginTop = "45vh";
+    };
     function dropbackground() {
       // document.getElementById("dropbg1").style.height = "100vh";
       var w = window.innerWidth;
@@ -104,8 +129,9 @@
                         document.getElementById("contact2").style.height="100vh";
                         document.getElementById("contact3").style.opacity = "1";
                         document.getElementById("contact3").style.height="100vh";
-                        // document.getElementById("contact2").style.backgroundColor = "rgb(3, 19, 107)";
-                        // document.getElementById("contact3").style.backgroundColor = "rgb(3, 19, 107)";
+                        document.getElementById("contact1").style.backgroundColor = "rgb(255, 255, 255)";
+                        document.getElementById("contact2").style.backgroundColor = "rgb(255, 255, 255)";
+                        document.getElementById("contact3").style.backgroundColor = "rgb(255, 255, 255)";
                         }, 1000);
     //   setTimeout(() => {document.getElementById("contact1").style.backgroundColor = "rgb(9, 72, 207)";}, 2000);
     //   setTimeout(() => {document.getElementById("contact1").style.backgroundColor = "rgb(3, 19, 107)";
@@ -121,7 +147,22 @@
                     //   document.getElementById("temp2").style.lineHeight = "20vh";
                       document.getElementById("temp2").style.paddingTop = "3vh";
                       document.getElementById("temp2").style.marginTop = "45vh";
-                    }, 3000);           
+                      document.getElementById("temp3").style.opacity = "0.9";
+                      document.getElementById("temp3").style.height = "15vh";
+                    //   document.getElementById("temp3").style.lineHeight = "20vh";
+                      document.getElementById("temp3").style.paddingTop = "3vh";
+                      document.getElementById("temp3").style.marginTop = "45vh";
+                    }, 3000);   
+    setTimeout(() => {
+                      document.getElementById("contrilabel").style.visibility = "visible";
+                      document.getElementById("contri1").style.visibility = "visible";
+                      document.getElementById("contri2").style.visibility = "visible";
+                      document.getElementById("contri3").style.visibility = "visible";
+                      document.getElementById("contrilabel").style.opacity = "0.9";
+                      document.getElementById("contri1").style.opacity = "0.9";
+                      document.getElementById("contri2").style.opacity = "0.9";
+                      document.getElementById("contri3").style.opacity = "0.9";
+                    }, 3500);         
      }
   </script>
 </div>
