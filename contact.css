@@ -309,7 +309,7 @@ body{
 
 #temp1 {
   position: absolute;
-  margin-left: 50vw;
+  margin-left: 10vw;
   margin-top: 20vh;
   background-color: rgb(80, 80, 94);
   z-index: 2;
@@ -317,15 +317,15 @@ body{
 
 #temp2 {
   position: absolute;
-  margin-left: 40vw;
-  margin-top: 50vh;
+  margin-left: 0vw;
+  margin-top: -20vh;
   background-color: rgb(31, 31, 36);
   z-index: 4;
 }
 
 #temp3 {
   position: absolute;
-  margin-left: 90vw;
+  margin-left: 40vw;
   margin-top: 10vh;
   background-color: rgb(55, 55, 59);
   z-index: 3;
@@ -333,8 +333,8 @@ body{
 
 #temp4 {
   position: absolute;
-  margin-left: 70vw;
-  margin-top: 80vh;
+  margin-left: 0vw;
+  margin-top: 50vh;
   background-color: rgb(144, 144, 146);
   z-index: 1;
 }
